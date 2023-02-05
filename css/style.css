@@ -1,0 +1,139 @@
+@import url(reset.css);
+
+:root {
+  --clr-primary-Soft-blue: hsl(215, 51%, 70%);
+  --clr-primary-Cyan: hsl(178, 100%, 50%);
+
+  /* (main BG) */
+  --clr-neutral-main: hsl(217, 54%, 11%);
+  /* (card BG) */
+  --clr-neutral-card: hsl(216, 50%, 16%);
+  /* (line) */
+  --clr-neutral-line: hsl(215, 32%, 27%);
+  --clr-neutral-White: hsl(0, 0%, 100%);
+
+  --fs-paragraph: 1.125rem;
+  --ff-text: "Outfit", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 2rem 0;
+
+  background-color: var(--clr-neutral-main);
+  font-family: var(--ff-text);
+}
+
+/* card design */
+.card {
+  background-color: var(--clr-neutral-card);
+  border-radius: 0.5rem;
+  width: 330px;
+}
+
+.card__container {
+  padding: 1rem 1.5rem;
+}
+
+.card__preview-icon {
+  background-image: url(../images/icon-view.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  transition: 150ms;
+}
+
+.card__preview-icon:hover {
+  background-color: var(--clr-primary-Cyan);
+  transition: 150ms;
+}
+
+.card__image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.card__image:hover {
+  opacity: 0.5;
+  transition: 150ms;
+}
+
+.card__eth {
+  color: var(--clr-primary-Cyan);
+}
+.card__eth::before {
+  content: url(../images/icon-ethereum.svg);
+  margin-right: 0.3rem;
+}
+.days__left::before {
+  content: url(../images/icon-clock.svg);
+}
+
+.card__text {
+  font-size: var(--fs-paragraph);
+  font-weight: 300;
+  color: var(--clr-primary-Soft-blue);
+}
+
+.name {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.card__title,
+.card__name {
+  color: var(--clr-neutral-White);
+  cursor: pointer;
+}
+
+.card__title:hover,
+.card__name:hover {
+  color: var(--clr-primary-Cyan);
+}
+
+.card__time,
+.card__about {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+hr {
+  border-color: var(--clr-neutral-line);
+  width: 100%;
+}
+
+.card__time {
+  justify-content: space-between;
+}
+
+.card__about {
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__avatar {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--clr-neutral-White);
+}
+
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
